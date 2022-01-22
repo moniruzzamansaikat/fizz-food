@@ -1,0 +1,33 @@
+.orderquantity {
+  margin: 1rem 0;
+}
+
+.orderquantity input {
+  max-width: 146px;
+  box-shadow: 0 0 0 !important;
+}
+
+.orderquantity input:focus {
+  border-color: #e9a80f;
+}
+
+.orderquantity button {
+  border-radius: 0;
+  box-sizing: border-box;
+  font-weight: 900;
+}
+
+.orderquantity button:not(.decrease) {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.orderquantity button.decrease {
+  background-color: rgb(216, 25, 25);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.orderquantity button:hover {
+  opacity: 0.8;
+}

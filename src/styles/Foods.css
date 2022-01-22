@@ -1,0 +1,48 @@
+.foods .card {
+  border: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.foods .card:hover {
+  transform: scale(1.05);
+}
+
+.foods .card .content {
+  text-align: center;
+}
+
+.foods .card .category {
+  border: 1px solid #e9a80f;
+  background-color: #e2ab2b4d;
+  color: #cc930e;
+  padding: 5px 1rem;
+  border-radius: 30px;
+  font-weight: 800;
+}
+
+.foods .card img {
+  width: 200px;
+  height: 180px;
+  display: block;
+  margin: 2rem 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease-in-out;
+}
+
+.foods .card img:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.foods button {
+  padding: 5px 1rem;
+  border-radius: 30px;
+  background-color: #e9a80f;
+  box-shadow: 0 0 0 !important;
+  font-size: 1.2rem;
+}
+
+.foods button:hover {
+  opacity: 0.8;
+}

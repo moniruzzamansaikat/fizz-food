@@ -1,0 +1,25 @@
+.categories {
+  margin-bottom: 2rem;
+}
+
+.categories ul {
+  display: flex;
+}
+
+.categories ul li {
+  padding: 5px 1rem;
+  border: 1px solid #b3b3b3;
+  margin: 0 10px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.categories ul li.active {
+  background-color: #e9a80f;
+  border-color: #e9a80f;
+}
+
+.categories ul li:first-child {
+  margin-left: 0;
+}

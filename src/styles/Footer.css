@@ -1,0 +1,9 @@
+.footer {
+  background-color: #140808;
+}
+
+.footer li {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  cursor: pointer;
+}

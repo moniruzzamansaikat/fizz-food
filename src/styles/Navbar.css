@@ -1,0 +1,66 @@
+.navbar {
+  background-color: #f0f0f0;
+  padding: 1rem 0;
+}
+
+.navbar a {
+  color: #000 !important;
+}
+
+.navbar.scrolled {
+  background: #f0f0f0 !important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.navbar .navbar-brand span {
+  color: #e9a80f;
+}
+
+.navbar .user_icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.navbar .logout_icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navbar .shopping-cart {
+  position: relative;
+  margin-right: 10px;
+}
+
+.navbar .shopping-cart img {
+  width: 30px;
+}
+
+.navbar .shopping-cart sup {
+  position: absolute;
+  left: -10px;
+  top: -16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  font-size: 1.1rem;
+  background-color: rgb(58, 182, 85);
+  color: #f0f0f0;
+}
