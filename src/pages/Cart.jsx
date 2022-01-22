@@ -19,12 +19,7 @@ function Cart() {
           </div>
         </div>
       ) : confirmedOrder ? (
-        <div
-          className="text-center py-4"
-          data-aos="fade-in"
-          data-aos-duration="10000"
-          data-aos-delay="5000"
-        >
+        <div className="text-center py-4" data-aos-anchor=".navbar">
           <img src="/img/thank-you.png" style={{ maxWidth: '400px' }} alt="" />
         </div>
       ) : (
