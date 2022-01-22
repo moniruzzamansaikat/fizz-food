@@ -3,6 +3,12 @@ import useAuth from '../../hooks/useAuth';
 import useFoods from '../../hooks/useFoods';
 import CartItem from './CartItem';
 
+function precisionRoundMod(number, precision) {
+  var factor = Math.pow(10, precision);
+  var n = precision < 0 ? number : 0.01 / factor + number;
+  return Math.round(n * factor) / factor;
+}
+
 function Checkout() {
   const { user, address } = useAuth();
   const { cart, getFoodById, confirmOrder } = useFoods();
@@ -31,13 +37,18 @@ function Checkout() {
         ))}
 
         <p className="d-flex justify-content-between">
-          Total Price: <span>${totalPrice}</span>
+          <span>Total Price: </span>
+          <span>${precisionRoundMod(totalPrice, 2)}</span>
         </p>
+
         <p className="d-flex justify-content-between">
-          Shipping Charge: <span>${totalPrice ? 10 : 0}</span>
+          <span>Shipping Charge:</span>
+          <span>${precisionRoundMod(totalPrice ? 10 : 0, 2)}</span>
         </p>
+
         <h5 className="d-flex justify-content-between mb-3">
-          Total Payable: <span>${totalPrice ? totalPrice + 10 : 0}</span>
+          <span>Total Payable:</span>
+          <span>${precisionRoundMod(totalPrice ? totalPrice + 10 : 0, 2)}</span>
         </h5>
 
         <button
