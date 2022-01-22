@@ -12,3 +12,5 @@ I have used google `react`, `context api`, `react-router-dom`, `firebase`[for au
 4. Run : `npm start`
 
 ## Have a look 👀
+
+[LIVE VERSION HERE 🌎](https://fizz-food.web.app/)
