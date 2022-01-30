@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -47,6 +51,10 @@ img {
 
 .nav-link {
   font-weight: 500;
+}
+
+.container {
+  padding: 0 1.5rem;
 }
 
 ul {
