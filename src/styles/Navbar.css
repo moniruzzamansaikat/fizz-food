@@ -3,8 +3,26 @@
   padding: 1rem 0;
 }
 
+.navbar .nav-item {
+  margin: 0 12px;
+}
+
 .navbar a {
-  color: #000 !important;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-item a:hover {
+  color: #e9a80f;
+}
+
+.navbar .navbar-toggler {
+  outline: 0;
+  box-shadow: 0 0 0 !important;
+}
+
+.navbar .navbar-toggler img {
+  width: 25px;
 }
 
 .navbar.scrolled {
@@ -60,7 +78,14 @@
   font-weight: bold;
   width: 25px;
   height: 25px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background-color: rgb(58, 182, 85);
   color: #f0f0f0;
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-item {
+    line-height: 4rem;
+    text-align: center;
+  }
 }

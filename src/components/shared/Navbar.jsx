@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import useFoods from '../../hooks/useFoods';
 import '../../styles/Navbar.css';
@@ -8,6 +7,7 @@ import '../../styles/Navbar.css';
 function Navbar() {
   const lcoation = useLocation();
   const { user, logout } = useAuth();
+  const { pathname } = useLocation();
   const { cart } = useFoods();
 
   // change the navbar background color when scrolling
@@ -23,8 +23,13 @@ function Navbar() {
     }
   }, [lcoation]);
 
+  useEffect(() => {
+    document.querySelector('.navbar-collapse') &&
+      document.querySelector('.navbar-collapse').classList.remove('show');
+  }, [pathname]);
+
   return (
-    <nav className="navbar navbar-expand">
+    <nav className="navbar navbar-expand-md">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           Fizz <span>Food</span>
@@ -38,40 +43,37 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <img src="/img/menu.svg" alt="" />
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {/* if user show cart icon */}
-            {user && (
-              <li className="nav-item">
-                <Link to="/cart" className="nav-link">
-                  <span className="shopping-cart">
-                    <img src="/img/cart.svg" alt="" />
-                    <sup>{cart?.length}</sup>
-                  </span>
-                </Link>
-              </li>
-            )}
-
-            {!user ? (
-              <li className="nav-item">
-                <Link to="/sign-in" className="btn btn-custom">
+            <li className="nav-item">
+              <Link to="/foods">Menu</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="cart shopping-cart" to="/cart">
+                <span>Cart</span>
+                <sup>{cart.length || 0}</sup>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/">Partnership</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/">About Us</Link>
+            </li>
+            <li className="nav-item">
+              {!user ? (
+                <Link className="btn-custom" to="/sign-in">
                   Sign In
                 </Link>
-              </li>
-            ) : (
-              <li>
-                <img src={user.photoURL} alt="" className="user_icon" />
-                <img
-                  src="/img/logout.png"
-                  alt=""
-                  className="logout_icon"
-                  onClick={() => logout()}
-                />
-              </li>
-            )}
+              ) : (
+                <span onClick={() => logout()} className="btn-custom">
+                  Sign Out
+                </span>
+              )}
+            </li>
           </ul>
         </div>
       </div>

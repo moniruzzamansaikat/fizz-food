@@ -10,8 +10,8 @@ function Header() {
       className="header"
       style={{ backgroundImage: `url(img/banner.jpg)` }}
     >
-      <div>
-        <h1>Best food for you to eat</h1>
+      <div className='content'> 
+        <h1>Foods to deliver directly to you door</h1>
         <div className="search">
           <button onClick={() => navigate('/foods')}>
             Start finding foods...

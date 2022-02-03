@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -29,6 +29,7 @@ img {
   background: #e9a80f;
   color: #0f0f0f;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .card {

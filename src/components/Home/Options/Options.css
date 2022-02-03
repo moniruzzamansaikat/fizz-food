@@ -1,0 +1,48 @@
+.options {
+  padding-top: 1.6rem;
+}
+
+.options .card {
+  box-shadow: 0 0 0;
+}
+
+.options .card h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(66, 66, 66);
+}
+
+.options .img {
+  position: relative;
+}
+
+.options img {
+  width: 100px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.options img.blob {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  margin-top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.options p {
+  font-size: 1.1rem;
+  color: rgb(66, 66, 66);
+}
+
+.options a {
+  color: #e9a80f;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
